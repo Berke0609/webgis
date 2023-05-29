@@ -1,21 +1,20 @@
 {
-  "name": "server",
+  "name": "web-gis-project",
   "version": "1.0.0",
-  "description": "# Lessons",
-  "main": "index.js",
+  "description": "PERN project deployed on Render.com",
+  "main": "server.js",
   "scripts": {
-    "build": "cd server && npm install  && cd ../client && npm install && npm run build",
     "start": "node server/server.js",
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "build": "cd server && npm install  && cd ../client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": ""
+  
+  "repository": {
+    "type": "git",
+    "url": "your-git-repo-url"
+  }
 }
