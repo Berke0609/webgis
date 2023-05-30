@@ -11,7 +11,7 @@ function App() {
 
   const getCategory = async () => {
     try {
-      const response = await fetch("http://localhost:10000/category");
+      const response = await fetch("https://nodebeckend-production.up.railway.app/category");
       const json = await response.json();
       const category = json.map((row) => ({
         name: row.name,
@@ -26,13 +26,13 @@ function App() {
   
   const getItems = async () => {
     try {
-      const categoryResponse = await fetch("http://localhost:10000/category");
+      const categoryResponse = await fetch("https://nodebeckend-production.up.railway.app/category");
       const categoryJson = await categoryResponse.json();
       const categoryMap = new Map(
         categoryJson.map((row) => [row.id, row.name])
       );
   
-      const response = await fetch("http://localhost:10000/item");
+      const response = await fetch("https://nodebeckend-production.up.railway.app/item");
       const json = await response.json();
       const items = json.map((row) => ({
         name: row.item_name,
