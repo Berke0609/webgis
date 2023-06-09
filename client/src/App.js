@@ -40,7 +40,7 @@ function App() {
       }
   
       const response = await fetch(
-        `nodebeckend-production.up.railway.app/category/item?query=${encodeURIComponent(query)}`
+        `nodebeckend-production.up.railway.app/item?query=${encodeURIComponent(query)}`
       );
       const json = await response.json();
       const items = json.map((row) => ({
