@@ -24,7 +24,7 @@ const Sidebar = ({ category, selectedCategories, handleCategory}) => {
         const { latitude, longitude } = position.coords;
   
         try {
-          const response = await fetch('nodebeckend-production.up.railway.app/item', {
+          const response = await fetch('https://nodebeckend-production.up.railway.app/item', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
